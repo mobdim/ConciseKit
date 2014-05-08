@@ -15,9 +15,10 @@
 - (NSString *)$center:(NSUInteger)width str:(NSString *)aString;
 - (BOOL)$includes:(NSString *)aString;
 - (NSString *)appendPath:(NSString *)aString;
-- (NSString *)trim;
+- (NSString *)$trim;
 - (BOOL)equals:(NSString*)string;
 - (BOOL)notEquals:(NSString*)string;
+- (NSArray *)$chars;
 
 @end
 

@@ -14,12 +14,25 @@
   return [NSString stringWithFormat:@"%@%@", aString, self];
 }
 
-- (NSArray *)split:(NSString *)aString {
+- (NSArray *)$split:(NSString *)aString {
   return [self componentsSeparatedByString:aString];
 }
 
-- (NSArray *)split {
-    return [self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+- (NSArray *)$split {
+  return [self componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+- (NSArray *)$chars {
+    NSMutableArray *array = [[[NSMutableArray alloc] init] autorelease];
+    for (int i=0; i < [self length]; i++) {
+        NSString *spot  = [NSString stringWithFormat:@"%c", [self characterAtIndex:i]];
+        [array addObject: spot];
+    }
+    return array;
+}
+
+- (NSString*)$trim {
+    return [self stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
 - (NSString *)$chop {
@@ -81,10 +94,6 @@
     if ([self rangeOfString:aString].location == NSNotFound)
         return NO;
     return YES;
-
-- (NSString *)trim {
-    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-}
 
 - (BOOL)equals:(NSString*)string {
     return [self isEqualToString:string];
