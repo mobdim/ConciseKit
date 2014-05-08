@@ -14,14 +14,18 @@
 - (NSString *)$center:(NSUInteger)width;
 - (NSString *)$center:(NSUInteger)width str:(NSString *)aString;
 - (BOOL)$includes:(NSString *)aString;
+- (NSString *)appendPath:(NSString *)aString;
+- (NSString *)trim;
+- (BOOL)equals:(NSString*)string;
+- (BOOL)notEquals:(NSString*)string;
 
 @end
 
 @interface NSMutableString (ConciseKit)
 
-- (NSMutableString *)$append_:(NSString *)aString;
-- (NSMutableString *)$prepend_:(NSString *)aString;
-- (NSMutableString *)$insert:(NSString *)aString at:(NSUInteger)anIndex;
-- (NSMutableString *)$set:(NSString *)aString;
+- (NSMutableString *)append_:(NSString *)aString;
+- (NSMutableString *)prepend_:(NSString *)aString;
+- (NSMutableString *)insert:(NSString *)aString at:(NSUInteger)anIndex;
+- (NSMutableString *)set:(NSString *)aString;
 
 @end
