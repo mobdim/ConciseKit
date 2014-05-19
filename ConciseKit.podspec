@@ -1,12 +1,13 @@
 Pod::Spec.new do |s|
   s.name     = 'ConciseKit'
-  s.version  = '0.1.3'
+  s.version  = '0.1.2.my'
   s.license  = 'MIT'
   s.summary  = 'A set of Objective-C additions and macros that lets you write code more quickly.'
   s.homepage = 'http://github.com/petejkim/ConciseKit'
   s.author   = { 'Peter Jihoon Kim' => 'raingrove@gmail.com' }
 
-  s.source   = { :git => 'http://github.com/goodtohear/ConciseKit.git' }
+#s.source   = { :git => 'http://github.com/goodtohear/ConciseKit.git' }
+s.source   = { :git => 'git@github.com:mobdim/ConciseKit.git', :branch => 'my' }
 
   s.source_files = 'src/**/*.{h,m}'
 
