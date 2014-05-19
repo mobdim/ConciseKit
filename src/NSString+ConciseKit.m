@@ -94,6 +94,7 @@
     if ([self rangeOfString:aString].location == NSNotFound)
         return NO;
     return YES;
+}
 
 - (BOOL)equals:(NSString*)string {
     return [self isEqualToString:string];
