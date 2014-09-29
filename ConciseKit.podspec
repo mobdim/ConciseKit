@@ -13,5 +13,7 @@ Pod::Spec.new do |s|
   s.clean_paths = 'ConciseKitSpecs'
 
   s.frameworks = 'Foundation'
+  
+  s.requires_arc = false
 end
 
